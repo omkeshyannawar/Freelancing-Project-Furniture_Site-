@@ -1,0 +1,122 @@
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0px 80px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  padding: 1rem;
+  /* margin: 0rem 1.5rem; */
+  border-bottom: 0.1rem solid rgb(243, 238, 238);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  box-sizing: border-box;
+}
+
+.nav-links {
+  /* text-decoration: none; */
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  cursor: pointer;
+  font-size: large;
+}
+
+.nav-links li {
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  padding: 0.2rem;
+}
+
+.nav-links li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #ffffff;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.nav-links li:hover::after {
+  width: 100%;
+  animation: heartbeat116 1.5s ease-in-out 0.3s infinite;
+}
+@keyframes heartbeat116 {
+  0%,
+  100% {
+    width: 100%;
+  }
+  50% {
+    width: 60%;
+  }
+}
+.logo p {
+  padding-left: 2rem;
+  color: #ffffff;
+}
+
+.pintu_logo {
+  height: 60px;
+  width: 60px;
+  border-radius: 10px;
+}
+
+/* From Uiverse.io by Allyhere */
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(105, 68, 11);
+  --btn-bg-2: rgb(151, 89, 8);
+  --btn-bg-color: rgb(230, 173, 98);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow:
+    0px 0px 20px rgba(218, 138, 35, 0.5),
+    0px 5px 5px -1px rgba(102, 71, 5, 0.25),
+    inset 4px 4px 8px rgba(177, 102, 5, 0.5),
+    inset -4px -4px 8px rgba(109, 64, 6, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow:
+    0 0 0 3px var(--btn-bg-color),
+    0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
